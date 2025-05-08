@@ -8,6 +8,7 @@ const authRoutes = require("./src/routes/authRoutes");
 
 // إنشاء التطبيق
 const app = express();
+app.use(express.json()); // ضروري لمعالجة JSON القادم من الطلبات
 
 // الاتصال بقاعدة البيانات مع معالجة الخطأ
 connectDB().catch(err => {
